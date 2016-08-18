@@ -40,7 +40,14 @@ export const Landing = React.createClass({
 					}
 
 					{!!this.state.featured.length && 
-						this.state.featured.map((item, index)=> {
+						this.state.featured.sort((foo, bar)=>{
+							// Sort so that most recent is first in array
+							if (foo.createDate > bar.createDate) { return -1; }
+							if (foo.createDate < bar.createDate) { return 1; }
+							return 0;
+						})
+						.slice(0,10)
+						.map((item, index)=> {
 							return (
 								<div key={'recent-' + index} className="article-container">
 									<Link to={'/article/' + item.slug}><img className="article-image" src={item.previewImage} /></Link>
