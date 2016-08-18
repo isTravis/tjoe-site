@@ -30,6 +30,7 @@ module.exports = {
       { test: /\.eot$/,    loader: 'file-loader' },
       { test: /\.svg$/,    loader: 'file-loader' },
       { test: /\.png$/,    loader: 'file-loader' },
+      { test: /\.jpg$/,    loader: 'file-loader' },
       { test: /\.scss$/,   loader: 'style!css!sass'}
     ]
   }

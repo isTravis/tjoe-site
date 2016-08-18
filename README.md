@@ -1,4 +1,4 @@
-# Simple React Site with PubPub API
+# Simple Journal Site with PubPub API
 
 ## Installation
 

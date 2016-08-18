@@ -1,0 +1,22 @@
+.landing-header {
+	background-image: url(./milky-way.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	min-height: 400px;
+}
+
+.landing-title { 
+	font-size: 4em;
+	padding: .5em .5em;
+	margin: 0;
+	color: #FFF;
+}
+
+.landing-description {
+	color: #DDD;
+	font-size: 1.5em;
+	padding: .75em 1.5em;
+}
