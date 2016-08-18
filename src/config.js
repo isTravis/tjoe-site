@@ -1,0 +1,1 @@
+export const JOURNAL_SLUG = 'jods';

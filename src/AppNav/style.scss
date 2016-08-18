@@ -1,6 +1,6 @@
 .nav-bar {
 	margin: 1em 0em;
-	border-bottom: 1px solid #bbb;
+	border-bottom: 1px solid #BBB;
 }
 
 .nav-item {
@@ -8,4 +8,8 @@
 	display: inline-block;
 	color: #888;
 	text-decoration: none;
+
+	&:hover {
+		color: #000;
+	}
 }

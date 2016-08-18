@@ -6,3 +6,28 @@ body {
 .container {
 	
 }
+
+.article-container {
+	border-bottom: 1px solid #BBB;
+	margin: 1em 0em;
+	padding: .5em 0em;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+.article-image {
+	width: 4em;
+	margin-right: 1em;
+	float: left;
+	
+}
+.article-title {
+	color: #000;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+.article-description {
+	
+}

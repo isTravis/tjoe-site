@@ -1,9 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router';
 import jQuery from 'jquery';
+import {JOURNAL_SLUG} from '../config';
+import Loader from '../Loader/Loader';
+
 import './style.scss';
 
 export const Landing = React.createClass({
-	
+	getInitialState() {
+		return {
+			featured: [],
+		};
+	},
+
+	componentDidMount() {
+		jQuery.getJSON('https://api.pubpub.org/journal/' + JOURNAL_SLUG + '/featured', (data)=> {
+			console.log(data);
+			this.setState({ featured: data });
+		});
+	},
+
 	render: function() {
 		return (
 			<div className="landing-container">
@@ -15,6 +31,26 @@ export const Landing = React.createClass({
 				<div>
 					<h2>Here is more content</h2>	
 					<p>In this space, we can put whatever we like!</p>
+				</div>
+
+				<div>
+					<h2>Recently Featured</h2>	
+					{!this.state.featured.length && 
+						<Loader />
+					}
+
+					{!!this.state.featured.length && 
+						this.state.featured.map((item, index)=> {
+							return (
+								<div key={'recent-' + index} className="article-container">
+									<Link to={'/article/' + item.slug}><img className="article-image" src={item.previewImage} /></Link>
+									<Link to={'/article/' + item.slug} className="article-title">{item.title}</Link>
+									<div className="article-description">{item.description}</div>
+								</div>
+							);
+						})
+					}
+
 					
 				</div>
 				
@@ -25,12 +61,6 @@ export const Landing = React.createClass({
 
 });
 
-// jQuery.getJSON("https://afternoon-atoll-31464.herokuapp.com/projects", function(data) {
-//   console.log(data);
 
-//   component.setState({
-//     projects: data.projects
-//   });
-// });
 
 export default Landing;
