@@ -1,11 +1,5 @@
-.landing-header {
-	background-image: url(./milky-way.jpg);
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-position: center center;
-	min-height: 400px;
+.landing-title-wrapper {
+	background-color: #2f2f2f;
 }
 
 .landing-title { 
@@ -15,8 +9,33 @@
 	color: #FFF;
 }
 
+.landing-subtitle-wrapper {
+	display: table;
+	vertical-align: top;
+	background-color: #DDD;
+}
+
+.landing-logo-wrapper {
+	display: table-cell;
+	vertical-align: top;
+	width: 150px;
+}
+
+.landing-logo {
+	width: 100%;
+}
+
+.landing-description-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+
 .landing-description {
-	color: #DDD;
+	color: #2f2f2f;
 	font-size: 1.5em;
-	padding: .75em 1.5em;
+	padding: .75em 0em;
+}
+
+.landing-recently-featured {
+	margin: 4em 0em;
 }

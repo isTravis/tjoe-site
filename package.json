@@ -1,7 +1,7 @@
 {
-  "name": "simple-journal-site",
+  "name": "tjoe-site",
   "version": "1.0.0",
-  "description": "A simple site that uses the PubPub API to present journal information.",
+  "description": "The TJOE Journal site. Built from the simple site that uses the PubPub API to present journal information.",
   "scripts": {
     "clean": "rimraf static",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pubpub/simple-journal-site.git"
+    "url": "https://github.com/pubpub/isTravis/tjoe-site.git"
   },
   "keywords": [
     "react",
@@ -20,10 +20,10 @@
     "journal"
   ],
   "author": "PubPub <pubpub@media.mit.edu> (https://github.com/pubpub)",
-  "homepage": "https://github.com/pubpub/simple-journal-site",
+  "homepage": "https://github.com/pubpub/isTravis/tjoe-site",
   "license": "CC0-1.0",
   "bugs": {
-    "url": "https://github.com/pubpub/simple-journal-site/issues"
+    "url": "https://github.com/pubpub/isTravis/tjoe-site/issues"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",

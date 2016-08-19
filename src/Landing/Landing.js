@@ -22,17 +22,20 @@ export const Landing = React.createClass({
 	render: function() {
 		return (
 			<div className="landing-container">
-				<div className="landing-header">
-					<h1 className="landing-title">My Journal</h1>	
-					<p className="landing-description">This journal is all about doing these sorts of things.</p>	
-				</div>
-				
-				<div>
-					<h2>Here is more content</h2>	
-					<p>In this space, we can put whatever we like!</p>
+				<div className="landing-title-wrapper">
+					<h1 className="landing-title">The Journal of Open Engineering</h1>						
 				</div>
 
-				<div>
+				<div className="landing-subtitle-wrapper">
+					<div className="landing-logo-wrapper">
+						<img className="landing-logo" src={require('./logo.png')} alt="Logo" />
+					</div>
+					<div className="landing-description-wrapper">
+						<p className="landing-description">A no-fee, open-access, peer-reviewed journal for research, design, and developments in engineering.</p>	
+					</div>
+				</div>
+
+				<div className="landing-recently-featured">
 					<h2>Recently Featured</h2>	
 					{!this.state.featured.length && 
 						<Loader />

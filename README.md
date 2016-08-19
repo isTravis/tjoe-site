@@ -1,6 +1,6 @@
-# Simple Journal Site with PubPub API
+# TJOE Journal Site
 
-Demo: http://simple-journal-site.s3-website-us-east-1.amazonaws.com/
+Demo: http://tjoe-journal-site.s3-website-us-east-1.amazonaws.com/
 
 ## Installation
 
@@ -18,4 +18,4 @@ npm run build
 Serve index.html, favicon.ico, and /static from server of your choice.
 
 ------------------
-Inspired and built upon https://github.com/Codaisseur/simple-todo-react-frontend
+Built upon https://github.com/pubpub/simple-journal-site

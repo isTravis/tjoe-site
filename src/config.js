@@ -1,1 +1,1 @@
-export const JOURNAL_SLUG = 'impacts';
+export const JOURNAL_SLUG = 'tjoe';
