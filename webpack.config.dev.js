@@ -22,7 +22,8 @@ module.exports = {
       {
         test: /\.jsx?/,
         loaders: ['babel'],
-        include: path.join(__dirname, 'src')
+        include: path.join(__dirname, 'src'),
+        exclude: path.join(__dirname, 'node_modules')
       },
       { test: /\.woff$/,   loader: 'url-loader?limit=10000&minetype=application/font-woff' },
       { test: /\.woff2$/,  loader: 'url-loader?limit=10000&minetype=application/font-woff' },

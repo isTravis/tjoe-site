@@ -1,5 +1,7 @@
 # Simple Journal Site with PubPub API
 
+Demo: http://simple-journal-site.s3-website-us-east-1.amazonaws.com/
+
 ## Installation
 
 ```bash
