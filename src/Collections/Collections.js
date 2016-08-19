@@ -9,7 +9,7 @@ export const Collections = React.createClass({
 	getInitialState() {
 		return {
 			collections: [],
-			fetchedCollections: false
+			requestComplete: false
 		};
 	},
 
@@ -17,7 +17,7 @@ export const Collections = React.createClass({
 		jQuery.getJSON('https://api.pubpub.org/journal/' + JOURNAL_SLUG + '/collections', (data)=> {
 			this.setState({ 
 				collections: data.collections,
-				fetchedCollections: true 
+				requestComplete: true 
 			});
 		});
 	},
@@ -28,11 +28,11 @@ export const Collections = React.createClass({
 			<div className="collections-container">
 				<h1>Collections</h1>
 
-				{!this.state.fetchedCollections && !this.state.collections.length && 
+				{!this.state.requestComplete &&
 					<Loader />
 				}
 
-				{this.state.fetchedCollections && !this.state.collections.length && 
+				{this.state.requestComplete && !this.state.collections.length && 
 					<h2>No Collections Found</h2>
 				}
 

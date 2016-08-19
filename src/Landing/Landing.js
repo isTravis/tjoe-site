@@ -10,12 +10,16 @@ export const Landing = React.createClass({
 	getInitialState() {
 		return {
 			featured: [],
+			requestComplete: false
 		};
 	},
 
 	componentDidMount() {
 		jQuery.getJSON('https://api.pubpub.org/journal/' + JOURNAL_SLUG + '/featured', (data)=> {
-			this.setState({ featured: data.atoms });
+			this.setState({ 
+				featured: data.atoms,
+				requestComplete: true
+			});
 		});
 	},
 
@@ -34,8 +38,12 @@ export const Landing = React.createClass({
 
 				<div>
 					<h2>Recently Featured</h2>	
-					{!this.state.featured.length && 
+					{!this.state.requestComplete &&
 						<Loader />
+					}
+
+					{this.state.requestComplete && !this.state.featured.length && 
+						<h2>No Recently Featured Pubs</h2>
 					}
 
 					{!!this.state.featured.length && 
