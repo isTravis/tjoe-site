@@ -21,7 +21,6 @@ export const Collection = React.createClass({
 	componentDidMount() {
 		jQuery.getJSON('https://api.pubpub.org/journal/' + JOURNAL_SLUG + '/collection/' + this.props.routeParams.collectionID)
 		.done((data)=> {
-			console.log(data);
 			this.setState({ 
 				collectionTitle: data.title,
 				collectionItems: data.atoms,

@@ -11,9 +11,9 @@ open http://localhost:3000
 ## Building Static files
 
 ```bash
-npm build
+npm run build
 ```
-Serve index.html and /static from server of your choice.
+Serve index.html, favicon.ico, and /static from server of your choice.
 
 ------------------
 Inspired and built upon https://github.com/Codaisseur/simple-todo-react-frontend

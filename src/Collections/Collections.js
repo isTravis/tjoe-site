@@ -14,7 +14,6 @@ export const Collections = React.createClass({
 
 	componentDidMount() {
 		jQuery.getJSON('https://api.pubpub.org/journal/' + JOURNAL_SLUG + '/collections', (data)=> {
-			console.log(data);
 			this.setState({ collections: data.collections });
 		});
 	},

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple site that uses the PubPub API to present journal information.",
   "scripts": {
-    "clean": "rimraf static",
+    "clean": "rimraf /static",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node devServer.js",
