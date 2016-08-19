@@ -16,7 +16,7 @@ export const Article = React.createClass({
 		return (
 			<div className="article-iframe-container">
 
-				<iframe className="article-iframe" src={'https://www.pubpub.org/pub/' + this.props.routeParams.pubSlug}/> 
+				<iframe className="article-iframe" src={'https://www.pubpub.org/pub/' + this.props.routeParams.pubSlug + '?embed=true'}/>
 
 			</div>
 		);
