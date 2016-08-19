@@ -1,6 +1,8 @@
 .article-iframe {
 	border: 0px;
-	outline: 1px solid #BBB;
+	/*outline: 1px solid #BBB;*/
 	width: 100%;
 	height: calc(100vh - 2em - 2em - 2em);
+    height: calc(100vh - 2em - 2em + 12px);
+    margin-top: -1em;
 }
