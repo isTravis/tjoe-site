@@ -57,6 +57,12 @@ export const Landing = React.createClass({
 							return 0;
 						})
 						.slice(0,10)
+						.filter((item)=>{
+							if (item.slug === 'howto' || item.slug === 'editorial-board' || item.slug === 'about-tjoe') {
+								return false;
+							}
+							return true;
+						})
 						.map((item, index)=> {
 							return (
 								<div key={'recent-' + index} className="article-container">

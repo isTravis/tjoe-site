@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './App/App';
 import About from './About/About';
+import EditorialBoard from './EditorialBoard/EditorialBoard';
+import HowTo from './HowTo/HowTo';
 import Article from './Article/Article';
 import Collection from './Collection/Collection';
 import Collections from './Collections/Collections';
@@ -17,6 +19,8 @@ ReactDOM.render((
       <Route path="/article/:pubSlug" component={Article}/>
       <Route path="/collections" component={Collections}/>
       <Route path="/collections/:collectionID" component={Collection}/>
+      <Route path="/editorialboard" component={EditorialBoard}/>
+      <Route path="/howto" component={HowTo}/>
       <Route path="*" component={PageNotFound}/>
     </Route>
   </Router>

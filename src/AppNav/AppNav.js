@@ -9,6 +9,8 @@ export const App = React.createClass({
 			<div className="nav-bar">
 				<Link className="nav-item" to={'/'}>Home</Link>
 				<Link className="nav-item" to={'/about'}>About</Link>
+				<Link className="nav-item" to={'/editorialboard'}>Editorial Board</Link>
+				<Link className="nav-item" to={'/howto'}>How To</Link>
 				<Link className="nav-item" to={'/collections'}>Collections</Link>
 			</div>
 		);

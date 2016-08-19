@@ -9,7 +9,7 @@ export const About = React.createClass({
 		return (
 			<div className="about-iframe-container">
 
-				<iframe className="article-iframe" src={'https://www.pubpub.org/pub/about-tjoe?embed=true&hideRightPanel=true'}/>
+				<iframe className="article-iframe" src={'https://www.pubpub.org/pub/howto?embed=true&hideRightPanel=true'}/>
 
 			</div>
 		);
