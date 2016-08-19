@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 export const About = React.createClass({
-	
+	propTypes: {
+		routeParams: PropTypes.object,
+	},
+
 	render: function() {
 		return (
-			<div className="about-container">
-				<h1>About</h1>
-				<p>Here we describe what our journal is about!</p>
-				<p>We could put admin lists, peer review policies, etc</p>
+			<div className="about-iframe-container">
+
+				<iframe className="article-iframe" src={'https://www.pubpub.org/pub/editorial-board?embed=true&hideRightPanel=true'}/>
+
 			</div>
 		);
 	}

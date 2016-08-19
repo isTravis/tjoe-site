@@ -1,6 +1,6 @@
 # TJOE Journal Site
 
-Demo: http://tjoe-journal-site.s3-website-us-east-1.amazonaws.com/
+Demo: http://tjoe.org.s3-website-us-east-1.amazonaws.com/
 
 ## Installation
 
