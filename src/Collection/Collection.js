@@ -12,6 +12,7 @@ export const Collection = React.createClass({
 
 	getInitialState() {
 		return {
+			collectionTitle: '',
 			collectionItems: [],
 			requestError: false,
 		};
@@ -21,7 +22,10 @@ export const Collection = React.createClass({
 		jQuery.getJSON('https://api.pubpub.org/journal/' + JOURNAL_SLUG + '/collection/' + this.props.routeParams.collectionID)
 		.done((data)=> {
 			console.log(data);
-			this.setState({ collectionItems: data });
+			this.setState({ 
+				collectionTitle: data.title,
+				collectionItems: data.atoms,
+			});
 		})
 		.fail((a, b, c)=> {
 			this.setState({requestError: true});
@@ -42,9 +46,9 @@ export const Collection = React.createClass({
 					</div>
 				}
 				
-				{!!this.state.collectionItems.length && 
+				{!this.state.requestError && !!this.state.collectionItems.length && 
 					<div>
-						<h1>Collection Title Here</h1>
+						<h1>{this.state.collectionTitle}</h1>
 
 						{this.state.collectionItems.sort((foo, bar)=>{
 							// Sort so that most recent is first in array
