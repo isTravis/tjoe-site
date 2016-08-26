@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './App/App';
 import About from './About/About';
+import BeginDraft from './BeginDraft/BeginDraft';
 import EditorialBoard from './EditorialBoard/EditorialBoard';
 import HowTo from './HowTo/HowTo';
 import Article from './Article/Article';
@@ -21,6 +22,7 @@ ReactDOM.render((
       <Route path="/collections/:collectionID" component={Collection}/>
       <Route path="/editorialboard" component={EditorialBoard}/>
       <Route path="/howto" component={HowTo}/>
+      <Route path="/begindraft" component={BeginDraft}/>
       <Route path="*" component={PageNotFound}/>
     </Route>
   </Router>
