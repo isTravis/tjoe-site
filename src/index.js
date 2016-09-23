@@ -11,8 +11,16 @@ import Collections from './Collections/Collections';
 import Landing from './Landing/Landing';
 import PageNotFound from './PageNotFound/PageNotFound';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-72199959-1');
+
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+}
+
 ReactDOM.render((
-  <Router history={browserHistory}>
+  <Router history={browserHistory} onUpdate={logPageView}>
     <Route path="/" component={App}>
       <IndexRoute component={Landing} />
       <Route path="/about" component={About}/>
