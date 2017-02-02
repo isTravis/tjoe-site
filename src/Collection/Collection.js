@@ -19,7 +19,7 @@ export const Collection = React.createClass({
 	},
 	
 	componentDidMount() {
-		jQuery.getJSON('https://api.pubpub.org/journal/' + JOURNAL_SLUG + '/collection/' + this.props.routeParams.collectionID)
+		jQuery.getJSON('http://v1.api.pubpub.org/journal/' + JOURNAL_SLUG + '/collection/' + this.props.routeParams.collectionID)
 		.done((data)=> {
 			this.setState({ 
 				collectionTitle: data.title,

@@ -15,7 +15,7 @@ export const Landing = React.createClass({
 	},
 
 	componentDidMount() {
-		jQuery.getJSON('https://api.pubpub.org/journal/' + JOURNAL_SLUG + '/featured', (data)=> {
+		jQuery.getJSON('http://v1.api.pubpub.org/journal/' + JOURNAL_SLUG + '/featured', (data)=> {
 			this.setState({ 
 				featured: data.atoms,
 				requestComplete: true
